@@ -1,18 +1,32 @@
-Title
+# Read Me Generator
 
-Description
+  # Description
+  Creating a read me 
 
-Table of Contents
+  # Table of Contents
 
-Installation
+  # Installation
+  Download VS code
 
-Usage Information
+  # Github Username
+  Lucero1027
 
-License
+  # Github E-mail Address
+  undefined
 
-Contributing
+  # Usage
+  n/a
 
-Tests
+  # License
+  
 
-Questions (GitHub Username and E-mail Address)
+  ![Github License Badge](https://img.shields.io/badge/license-MIT-blue.svg)
+    
+  # This project is licenses under the MIT license.
+  
 
+
+
+  # Contributors
+  Any suggestions or changes I can add
+    

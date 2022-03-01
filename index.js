@@ -26,6 +26,15 @@ const questions = [
         name: 'tableOfContents',
     },
 
+
+    {
+      type: 'input',
+      message: 'What are the installation instructions?',
+      name: 'installation',
+    },
+
+    
+
     {
       type: 'input',
       message: 'What is your username on GitHub?',
@@ -37,33 +46,40 @@ const questions = [
     {
       type: 'input',
       message: 'What is your e-mail address on GitHub?',
-      name: 'e-mailAddress',
+      name: 'emailAddress',
     },
 
     {
-      type: 'input',
+      type: 'list',
       message: 'What license will your project use?',
       name: 'license',
+      choices: [ "GPLv3", "MIT", "Apache"]
     
     },
     
     {
         type: 'input',
-        message: 'Are there any contributors in your project?',
-        name: 'contributors',
+        message: 'How can others contribute?',
+        name: 'contribute',
     },
 
     {
       type: 'input',
-      message: 'How is this project used?',
-      name: 'used'
+      message: 'How can this code be tested?',
+      name: 'test'
+    },
+
+    {
+      type: 'input',
+      message: 'Enter usage information.',
+      name: 'usage'
     },
 ];
 
 // TODO: Create a function to write README file
 
-function writeToFile(fileName, data) {
-    fs.writeFile('README.md', content, err => {
+function writeToFile(data) {
+    fs.writeFile('README.md', data, err => {
         if (err) {
             console.error(err)
             return
@@ -80,7 +96,7 @@ function init() {
         .prompt(questions)
         .then(response => {
         //    console.log(response.fullName)
-            writeFile('README.md'.generateMarkdown(response))
+            writeToFile(generateMarkdown(response))
             
         });
 }
